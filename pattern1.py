@@ -1,0 +1,18 @@
+from turtle import *
+# pentagon
+pencolor('red')
+speed('slow')
+fillcolor('black')
+begin_fill()
+forward(100)
+right(72)
+forward(100)
+right(72)
+forward(100)
+right(72)
+forward(100)
+right(72)
+forward(100)
+right(72)
+end_fill()
+mainloop() 
