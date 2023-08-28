@@ -1,6 +1,6 @@
 from turtle import *
 size = 100
-width=50
+width(20)
 pencolor('black')
 speed('slow')
 fillcolor=('yellow')
