@@ -29,14 +29,14 @@
             <div class="card text-light">
                 <div class="card-header">Login</div>
                 <div class="card-body">
-                    <form>
+                    <form  method="post"> <!-- Specify the correct action URL for form submission -->
                         <div class="form-group mb-3">
                             <label for="email">Email address:</label><i class="fa fa-envelope"></i>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
                         </div>
                         <div class="form-group mb-3">
                             <label for="password">Password:</label><i class="fa fa-key"></i>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                         </div>
                         <button type="submit" class="btn btn-light">Login</button>
                     </form>
@@ -45,5 +45,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

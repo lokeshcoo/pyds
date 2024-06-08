@@ -19,7 +19,7 @@ body {
 iframe {
     width: 80%;
     height: 80%;
-    border: 1px solid #ccc;
+    border: 1px solid #1411cf;
 }
 </style>
 <!DOCTYPE html>
@@ -28,11 +28,18 @@ iframe {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Viewer</title>
-    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <div class="file-viewer">
-        <iframe src="C:\Users\lenovo\Desktop\Major project\Code\templates\upload.html" frameborder="0"></iframe>
+    <div class="container my-5" style="margin-top: 100px;">
+        <div class="row">
+            <h2>Stock data</h2>
+            <div class="col-md-8">
+                <div class="viewer">
+                    {{table|safe}}
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

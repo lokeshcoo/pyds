@@ -12,17 +12,27 @@
             <li class="nav-item">
                 <a class="nav-link fs-4" href="/">Home</a>
             </li>
+            {% if session.isauth %}
+            <li class="nav-item">
+                <a class="nav-link fs-4" href="/logout">Logout</a>
+            </li>
+            {% else %}
             <li class="nav-item">
                 <a class="nav-link fs-4" href="/login">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-4" href="/register">Register</a>
             </li>
+            {% endif %}
+            
             <li class="nav-item">
                 <a class="nav-link fs-4" href="/file/upload">Upload</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-4" href="/file/list">File List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-4"  href="/prediction"><strong>Predict</strong></a>
             </li>
         </ul>
     </div>

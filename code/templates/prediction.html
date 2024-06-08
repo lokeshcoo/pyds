@@ -1,0 +1,78 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<body>
+    <h2>Predicted Stock Prices</h2>
+    {{ predictions | safe }}
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Specify a fallback font-family in case the primary font isn't available */
+            background-image: url('/static/prediction\ image8.jpeg'); /* Replace 'background.jpg' with the path to your background image */
+            background-size: cover; /* Cover the entire viewport with the background image */
+            background-position: center; /* Center the background image */
+            color: rgb(237, 241, 241); /* Text color */
+        }
+        h2 {
+            font-size: 24px; /* Adjust the font size of the heading */
+            text-align: center; /* Center align the heading */
+            margin-top: 30px;
+        }
+        form {
+            margin: 0 auto; /* Center the form horizontally */
+            margin-top: 80px;
+            width: 50%; /* Set the width of the form */
+            background-color: rgba(8, 68, 131, 0.988); /* Add a semi-transparent background color to the form */
+            padding: 20px; /* Add some padding to the form */
+            border-radius: 10px; /* Add rounded corners to the form */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%; /* Make the input fields and button fill the width of the form */
+            padding: 10px; /* Add padding to the input fields and button */
+            margin-bottom: 10px; /* Add some space between the input fields and button */
+            border: none; /* Remove the default border */
+            border-radius: 5px; /* Add rounded corners to the input fields and button */
+        }
+        input[type="submit"] {
+            background-color: #50d1ee; /* Green background color for the button */
+            color: white; /* Text color for the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        input[type="submit"]:hover {
+            background-color: #11d5df; /* Darker green background color on hover */
+        }
+        .input-heading {
+            margin-top: 30px;
+            padding: 5px; /* Add padding to the element */
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="input-heading">Enter Stock Symbol and Number of Days to Predict</h2>
+    <form action="/predict" method="post">
+        Stock Symbol: <input type="text" name="stock_symbol"><br>
+        Number of Days: <input type="number" name="n_days"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+
+
+{% endblock %}
+
+ 

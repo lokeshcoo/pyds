@@ -3,8 +3,6 @@ import os
 
 mime_types = {
     'csv': 'text/csv',
-    'json': 'application/json',
-    'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 }
 
 def get_mime_type(file_path):
